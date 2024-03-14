@@ -10,5 +10,9 @@
         <module name="busApi.busApi.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="busApi.busApi.main~1" target="17" />
+      <module name="busApi.busApi.test~1" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
