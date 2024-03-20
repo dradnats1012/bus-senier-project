@@ -1,8 +1,8 @@
-package koreatechBus.busApi.controller;
+package koreatechbus.controller;
 
-import koreatechBus.busApi.domain.User;
-import koreatechBus.busApi.dto.user.RegisterDTO;
-import koreatechBus.busApi.service.UserService;
+import koreatechbus.domain.User;
+import koreatechbus.dto.user.RegisterDTO;
+import koreatechbus.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

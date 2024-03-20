@@ -1,6 +1,6 @@
-package koreatechBus.busApi.repository;
+package koreatechbus.repository;
 
-import koreatechBus.busApi.domain.User;
+import koreatechbus.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

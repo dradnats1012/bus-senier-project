@@ -1,4 +1,4 @@
-package koreatechBus.busApi;
+package koreatechbus;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

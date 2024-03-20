@@ -1,4 +1,4 @@
-package koreatechBus.busApi.domain;
+package koreatechbus.domain;
 
 import jakarta.persistence.*;
 import lombok.Builder;

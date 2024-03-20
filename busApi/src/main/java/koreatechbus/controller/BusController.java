@@ -1,8 +1,9 @@
-package koreatechBus.busApi.controller;
+package koreatechbus.controller;
 
-import koreatechBus.busApi.service.BusService;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import koreatechbus.domain.Bus;
+import koreatechbus.dto.bus.NewBusDTO;
+import koreatechbus.service.BusService;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,7 +16,14 @@ public class BusController {
         this.busService = busService;
     }
 
+    @GetMapping()
     public List<String> getAllBus(){
         return busService.getAllBus();
     }
+
+    @PostMapping
+    public Bus putBus(@RequestBody NewBusDTO newBusDTO){
+
+    }
+
 }

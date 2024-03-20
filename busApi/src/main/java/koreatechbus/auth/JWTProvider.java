@@ -1,4 +1,4 @@
-package koreatechBus.busApi.auth;
+package koreatechbus.auth;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

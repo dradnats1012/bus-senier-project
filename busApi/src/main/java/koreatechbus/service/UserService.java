@@ -1,10 +1,10 @@
-package koreatechBus.busApi.service;
+package koreatechbus.service;
 
-import koreatechBus.busApi.auth.JWTProvider;
-import koreatechBus.busApi.domain.User;
-import koreatechBus.busApi.dto.user.LoginDTO;
-import koreatechBus.busApi.dto.user.RegisterDTO;
-import koreatechBus.busApi.repository.UserRepository;
+import koreatechbus.auth.JWTProvider;
+import koreatechbus.domain.User;
+import koreatechbus.dto.user.LoginDTO;
+import koreatechbus.dto.user.RegisterDTO;
+import koreatechbus.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.mindrot.jbcrypt.BCrypt;
 
