@@ -1,10 +1,11 @@
-package koreatechbus.domain;
+package koreatechBus.domain;
 
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Set;
 
 @Entity
@@ -40,5 +41,11 @@ public class Bus {
         this.name = name;
         this.departTime = departTime;
         this.arrivalTime = arrivalTime;
+    }
+
+    @PrePersist
+    public void prePersist() {
+        if (passengers == null) passengers = 0L;
+        if (bookmarkNum == null) bookmarkNum = 0L;
     }
 }

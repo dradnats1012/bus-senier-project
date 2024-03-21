@@ -1,8 +1,9 @@
-package koreatechbus.controller;
+package koreatechBus.controller;
 
-import koreatechbus.domain.Bus;
-import koreatechbus.dto.bus.NewBusDTO;
-import koreatechbus.service.BusService;
+import jakarta.persistence.GeneratedValue;
+import koreatechBus.domain.Bus;
+import koreatechBus.dto.bus.NewBusDTO;
+import koreatechBus.service.BusService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,7 +24,6 @@ public class BusController {
 
     @PostMapping
     public Bus putBus(@RequestBody NewBusDTO newBusDTO){
-
+        return busService.putBus(newBusDTO);
     }
-
 }

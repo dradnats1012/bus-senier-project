@@ -1,6 +1,6 @@
-package koreatechbus.repository;
+package koreatechBus.repository;
 
-import koreatechbus.domain.Bus;
+import koreatechBus.domain.Bus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

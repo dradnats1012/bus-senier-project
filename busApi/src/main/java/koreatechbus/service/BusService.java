@@ -1,8 +1,8 @@
-package koreatechbus.service;
+package koreatechBus.service;
 
-import koreatechbus.domain.Bus;
-import koreatechbus.dto.bus.NewBusDTO;
-import koreatechbus.repository.BusRepository;
+import koreatechBus.domain.Bus;
+import koreatechBus.dto.bus.NewBusDTO;
+import koreatechBus.repository.BusRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
