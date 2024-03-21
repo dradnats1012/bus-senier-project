@@ -1,13 +1,16 @@
-package koreatechbus.service;
+package koreatechBus.service;
 
-import koreatechbus.auth.JWTProvider;
-import koreatechbus.domain.User;
-import koreatechbus.dto.user.LoginDTO;
-import koreatechbus.dto.user.RegisterDTO;
-import koreatechbus.repository.UserRepository;
+import koreatechBus.auth.JWTProvider;
+import koreatechBus.domain.Bookmark;
+import koreatechBus.domain.User;
+import koreatechBus.dto.etc.MainDTO;
+import koreatechBus.dto.user.LoginDTO;
+import koreatechBus.dto.user.RegisterDTO;
+import koreatechBus.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.mindrot.jbcrypt.BCrypt;
 
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -72,6 +75,27 @@ public class UserService {
     public String loginUser(LoginDTO loginDTO){
         User user = userRepository.findBySchoolId(loginDTO.getSchoolId());
 
-        return jwtProvider.createToken(Integer.parseInt(user.getSchoolId()));
+        if (!checkPass(loginDTO.getPassword(), user.getPassword())) {
+            throw new IllegalArgumentException("잘못된 비밀번호입니다!");
+        }
+
+        Integer schoolId = Integer.parseInt(loginDTO.getSchoolId());
+        return jwtProvider.createToken(schoolId);
+    }
+
+    private boolean checkPass(String plainPassword, String hashedPassword) {
+
+        return BCrypt.checkpw(plainPassword, hashedPassword);
+    }
+
+    public MainDTO getMainPage(String token){
+        String schoolId = jwtProvider.getSchoolId(token);   // 토큰에서 schoolId 추출
+        User user = userRepository.findBySchoolId(schoolId);
+
+        String name = user.getName();
+        Long role = user.getRole();
+        Set<Bookmark> bookmarks = user.getBookmarks();
+
+        return new MainDTO(name, schoolId, role, bookmarks);
     }
 }

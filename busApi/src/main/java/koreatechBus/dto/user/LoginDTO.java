@@ -1,4 +1,4 @@
-package koreatechbus.dto.user;
+package koreatechBus.dto.user;
 
 import lombok.Getter;
 
