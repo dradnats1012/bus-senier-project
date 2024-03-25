@@ -1,6 +1,9 @@
-package koreatechbus.domain;
+package koreatechBus.domain;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 
 @Entity
@@ -13,6 +16,7 @@ public class Bookmark {
     @Column(name = "bookmark_id")
     private Long bookmarkId;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
@@ -20,4 +24,14 @@ public class Bookmark {
     @ManyToOne
     @JoinColumn(name = "bus_id")
     private Bus bus;
+
+    @Builder
+    public Bookmark(User user, Bus bus){
+        this.user = user;
+        this.bus = bus;
+    }
+
+    public Bookmark() {
+
+    }
 }
