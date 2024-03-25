@@ -1,6 +1,7 @@
-package koreatechbus.domain;
+package koreatechBus.domain;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 
 @Entity
@@ -19,5 +20,14 @@ public class Station {
     @Column(name = "arrival_time")
     private String arrivalTime;
 
+    @OneToOne
+    @JoinColumn(name = "bus_id")
+    private Bus bus;
 
+    @Builder
+    public Station(String stationName, String arrivalTime, Bus bus) {
+        this.stationName = stationName;
+        this.arrivalTime = arrivalTime;
+        this.bus = bus;
+    }
 }
