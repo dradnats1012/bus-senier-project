@@ -1,8 +1,8 @@
-package koreatechBus.dto.bus;
+package koreatechbus.dto.bus;
 
 import java.util.List;
 
-import koreatechBus.enums.Days;
+import koreatechbus.enums.Days;
 public record NewBusDTO(
     String name,
     String departTime,

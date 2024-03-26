@@ -1,13 +1,13 @@
-package koreatechBus.controller;
+package koreatechbus.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import koreatechBus.domain.Bookmark;
-import koreatechBus.dto.bookmark.BookMarkDTO;
-import koreatechBus.service.BookmarkService;
+import koreatechbus.domain.Bookmark;
+import koreatechbus.dto.bookmark.BookMarkDTO;
+import koreatechbus.service.BookmarkService;
 
 @RestController
 @RequestMapping("/bookmark")

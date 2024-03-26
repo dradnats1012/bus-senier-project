@@ -1,4 +1,4 @@
-package koreatechBus.auth;
+package koreatechbus.auth;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -31,7 +31,6 @@ public class JWTProvider {
     public String getSchoolId(String token){
         SecretKey key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
 
-        System.out.println("ㅎㅇ");
         /*String schoolId = Jwts.parser()
                 .verifyWith(key)
                 .build()
@@ -45,7 +44,7 @@ public class JWTProvider {
                 .parseClaimsJws(token)
                 .getBody()
                 .get("schoolId").toString();
-        System.out.println(schoolId2);
+
         return schoolId2;
     }
 

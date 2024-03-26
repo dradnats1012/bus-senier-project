@@ -1,11 +1,10 @@
 package koreatechbus.dto.user;
 
-import lombok.Getter;
+public record RegisterDTO (
+    String schoolId,
+    String name,
+    String password,
+    String email
+) {
 
-@Getter
-public class RegisterDTO {
-    private String schoolId;
-    private String name;
-    private String password;
-    private String email;
 }

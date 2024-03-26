@@ -1,4 +1,4 @@
-package koreatechBus.domain;
+package koreatechbus.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

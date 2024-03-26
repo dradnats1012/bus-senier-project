@@ -1,6 +1,6 @@
-package koreatechBus.repository;
+package koreatechbus.repository;
 
-import koreatechBus.domain.Bookmark;
+import koreatechbus.domain.Bookmark;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookmarkRepository extends JpaRepository<Bookmark, Long> {

@@ -1,4 +1,4 @@
-package koreatechBus.domain;
+package koreatechbus.domain;
 
 import jakarta.persistence.*;
 import lombok.Builder;
@@ -29,5 +29,9 @@ public class Station {
         this.stationName = stationName;
         this.arrivalTime = arrivalTime;
         this.bus = bus;
+    }
+
+    public Station() {
+
     }
 }

@@ -1,11 +1,12 @@
 package koreatechbus.domain;
 
 import jakarta.persistence.*;
+import koreatechbus.enums.Role;
 import lombok.Builder;
 import lombok.Getter;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -29,14 +30,15 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @Enumerated(value = EnumType.STRING)
     @Column(name = "role")
-    private Long role;      // 1 : 관리자, 2 : 버스 기사, 3 : 일반 사용자
+    private Role role;      // 1 : 관리자, 2 : 버스 기사, 3 : 일반 사용자
 
     @OneToMany(mappedBy = "user")
-    private Set<Bookmark> bookmarks = new HashSet<>();
+    private List<Bookmark> bookmarks = new ArrayList<>();
 
     @Builder
-    public User(String schoolId, String name, String password, String email, Long role){
+    public User(String schoolId, String name, String password, String email, Role role){
         this.schoolId = schoolId;
         this.name = name;
         this.password = password;

@@ -1,12 +1,12 @@
-package koreatechBus.service;
+package koreatechbus.service;
 
 import org.springframework.stereotype.Service;
 
-import koreatechBus.domain.Bus;
-import koreatechBus.domain.Station;
-import koreatechBus.dto.station.RegisterStationDTO;
-import koreatechBus.repository.BusRepository;
-import koreatechBus.repository.StationRepository;
+import koreatechbus.domain.Bus;
+import koreatechbus.domain.Station;
+import koreatechbus.dto.station.RegisterStationDTO;
+import koreatechbus.repository.BusRepository;
+import koreatechbus.repository.StationRepository;
 
 @Service
 public class StationService {

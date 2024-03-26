@@ -1,15 +1,14 @@
-package koreatechBus.controller;
+package koreatechbus.controller;
 
-import koreatechBus.auth.JWTProvider;
-import koreatechBus.domain.User;
-import koreatechBus.dto.user.LoginDTO;
-import koreatechBus.dto.user.RegisterDTO;
-import koreatechBus.service.UserService;
-import lombok.Getter;
+import koreatechbus.domain.User;
+import koreatechbus.dto.user.LoginDTO;
+import koreatechbus.dto.user.RegisterDTO;
+import koreatechbus.service.UserService;
+
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UserController {
     private final UserService userService;
     public UserController(UserService userService){

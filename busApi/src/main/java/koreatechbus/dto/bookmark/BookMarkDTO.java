@@ -1,4 +1,4 @@
-package koreatechBus.dto.bookmark;
+package koreatechbus.dto.bookmark;
 
 public record BookMarkDTO(
     Long userId,

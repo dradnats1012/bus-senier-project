@@ -1,4 +1,4 @@
-package koreatechBus.enums;
+package koreatechbus.enums;
 
 import lombok.Getter;
 

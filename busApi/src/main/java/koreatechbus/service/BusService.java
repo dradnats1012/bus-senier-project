@@ -1,8 +1,8 @@
-package koreatechBus.service;
+package koreatechbus.service;
 
-import koreatechBus.domain.Bus;
-import koreatechBus.dto.bus.NewBusDTO;
-import koreatechBus.repository.BusRepository;
+import koreatechbus.domain.Bus;
+import koreatechbus.dto.bus.NewBusDTO;
+import koreatechbus.repository.BusRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,9 +22,10 @@ public class BusService {
 
     public Bus putBus(NewBusDTO newBusDTO){
         return busRepository.save(Bus.builder()
-                .name(newBusDTO.getName())
-                .departTime(newBusDTO.getDepartTime())
-                .arrivalTime(newBusDTO.getArrivalTime())
+                .name(newBusDTO.name())
+                .departTime(newBusDTO.departTime())
+                .arrivalTime(newBusDTO.arrivalTime())
+                .runDays(newBusDTO.runDays())
                 .build());
     }
 

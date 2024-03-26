@@ -1,16 +1,14 @@
-package koreatechBus.service;
-
-import java.awt.print.Book;
+package koreatechbus.service;
 
 import org.springframework.stereotype.Service;
 
-import koreatechBus.domain.Bookmark;
-import koreatechBus.domain.Bus;
-import koreatechBus.domain.User;
-import koreatechBus.dto.bookmark.BookMarkDTO;
-import koreatechBus.repository.BookmarkRepository;
-import koreatechBus.repository.BusRepository;
-import koreatechBus.repository.UserRepository;
+import koreatechbus.domain.Bookmark;
+import koreatechbus.domain.Bus;
+import koreatechbus.domain.User;
+import koreatechbus.dto.bookmark.BookMarkDTO;
+import koreatechbus.repository.BookmarkRepository;
+import koreatechbus.repository.BusRepository;
+import koreatechbus.repository.UserRepository;
 
 @Service
 public class BookmarkService {

@@ -1,12 +1,12 @@
-package koreatechBus.domain;
+package koreatechbus.domain;
 
 import jakarta.persistence.*;
+import koreatechbus.enums.Days;
 import lombok.Builder;
 import lombok.Getter;
 
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "bus")
@@ -33,14 +33,24 @@ public class Bus {
     @Column(name = "bookmark_num")      // 북마크로 등록한 사용자 수
     private Long bookmarkNum;
 
-    @OneToMany(mappedBy = "bus")
-    private Set<Bookmark> bookmarks = new HashSet<>();
+    @Enumerated(value = EnumType.STRING)
+    @ElementCollection
+    @Column(name = "run_days")
+    private List<Days> runDays = new ArrayList<>();
+
+    /*@OneToMany(mappedBy = "bus")          // 버스에서 이걸 가질 필요가 있을까????
+    private Set<Bookmark> bookmarks = new HashSet<>();*/
 
     @Builder
-    public Bus(String name, String departTime, String arrivalTime){
+    public Bus(String name, String departTime, String arrivalTime, List<Days> runDays){
         this.name = name;
         this.departTime = departTime;
         this.arrivalTime = arrivalTime;
+        this.runDays = runDays;
+    }
+
+    public Bus() {
+
     }
 
     @PrePersist

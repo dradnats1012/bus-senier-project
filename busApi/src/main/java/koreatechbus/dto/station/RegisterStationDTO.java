@@ -1,4 +1,4 @@
-package koreatechBus.dto.station;
+package koreatechbus.dto.station;
 
 public record RegisterStationDTO(
     Long busId,

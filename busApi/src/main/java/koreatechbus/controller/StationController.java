@@ -1,13 +1,13 @@
-package koreatechBus.controller;
+package koreatechbus.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import koreatechBus.domain.Station;
-import koreatechBus.dto.station.RegisterStationDTO;
-import koreatechBus.service.StationService;
+import koreatechbus.domain.Station;
+import koreatechbus.dto.station.RegisterStationDTO;
+import koreatechbus.service.StationService;
 
 @RestController
 @RequestMapping("/station")
