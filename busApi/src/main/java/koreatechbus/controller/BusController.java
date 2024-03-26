@@ -1,6 +1,7 @@
 package koreatechbus.controller;
 
 import koreatechbus.domain.Bus;
+import koreatechbus.dto.bus.GetBusDTO;
 import koreatechbus.dto.bus.NewBusDTO;
 import koreatechbus.service.BusService;
 import org.springframework.web.bind.annotation.*;
@@ -24,5 +25,12 @@ public class BusController {
     @PostMapping
     public Bus putBus(@RequestBody NewBusDTO newBusDTO){
         return busService.putBus(newBusDTO);
+    }
+
+    @GetMapping("/{busId}")
+    public GetBusDTO getBusById(
+        @PathVariable("busId") Long busId
+    ){
+        return busService.getBusById(busId);
     }
 }

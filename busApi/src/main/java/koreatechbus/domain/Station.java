@@ -20,7 +20,7 @@ public class Station {
     @Column(name = "arrival_time")
     private String arrivalTime;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "bus_id")
     private Bus bus;
 
