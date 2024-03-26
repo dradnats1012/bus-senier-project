@@ -1,10 +1,12 @@
 package koreatechBus.dto.bus;
 
-import lombok.Getter;
+import java.util.List;
 
-@Getter
-public class NewBusDTO {
-    private String name;
-    private String departTime;
-    private String arrivalTime;
+import koreatechBus.enums.Days;
+public record NewBusDTO(
+    String name,
+    String departTime,
+    String arrivalTime,
+    List<Days> runDays
+) {
 }
