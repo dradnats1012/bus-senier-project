@@ -1,8 +1,8 @@
 package koreatechbus.domain;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
-import lombok.NonNull;
 
 @Entity
 @Table(name = "post")
@@ -30,4 +30,13 @@ public class Post {
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    @Builder
+    public Post(String title, String content, String postTime, Long postType, User user) {
+        this.title = title;
+        this.content = content;
+        this.postTime = postTime;
+        this.postType = postType;
+        this.user = user;
+    }
 }
