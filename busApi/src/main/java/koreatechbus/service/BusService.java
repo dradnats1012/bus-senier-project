@@ -2,6 +2,7 @@ package koreatechbus.service;
 
 import koreatechbus.domain.Bus;
 import koreatechbus.domain.Station;
+import koreatechbus.dto.bus.BusDTO;
 import koreatechbus.dto.bus.GetBusDTO;
 import koreatechbus.dto.bus.NewBusDTO;
 import koreatechbus.enums.Days;
@@ -10,6 +11,7 @@ import koreatechbus.repository.StationRepository;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,8 +26,15 @@ public class BusService {
         this.stationRepository = stationRepository;
     }
 
-    public List<String> getAllBus(){
-        return busRepository.findAllBusNames();
+    public List<BusDTO> getAllBus(){
+        List<Bus> buses = busRepository.findAll();
+        List<BusDTO> busDTOS = new ArrayList<>();
+
+        for (Bus bus : buses) {
+            busDTOS.add(BusDTO.of(bus.getBusId(), bus.getName()));
+        }
+
+        return busDTOS;
     }
 
     public Bus putBus(NewBusDTO newBusDTO){

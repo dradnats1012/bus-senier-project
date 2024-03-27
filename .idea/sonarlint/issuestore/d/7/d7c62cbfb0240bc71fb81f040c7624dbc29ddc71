@@ -1,0 +1,6 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾€ú’üÿÿÿÿ8ğìô„æ1J$6f0078e5-374f-4434-9f80-e1ad5765fb16
+
+java:S1128"9Remove this unused import 'koreatechBus.domain.Bookmark'.(¸•úÉıÿÿÿÿ8¡Ìÿ‡æ1J$3e99f2d3-e4c9-492a-9f85-049f86d32af7
+r
+java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8¡Ìÿ‡æ1J$55405acb-40cf-4076-90c1-80c6887cdf45

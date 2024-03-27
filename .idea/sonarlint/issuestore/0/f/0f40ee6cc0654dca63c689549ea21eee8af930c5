@@ -1,0 +1,13 @@
+
+¤
+java:S1488)"aImmediately return this expression instead of assigning it to the temporary variable "schoolId2".(ÔÊÅ8° »¤ç1J$71498f9e-dd74-4fdb-acdf-0cd09fd5bc54
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(™»şœ8ĞÄ¢…æ1J$568693cb-d205-417e-843e-b182ba708cf5
+~	java:S125'"<This block of commented-out lines of code should be removed.(¨ÙÂ¸8Íâí‡æ1J$26cf25e4-0ea7-43fd-8cc2-5497ffe63734
+w
+java:S1874*"5Remove this use of "setSigningKey"; it is deprecated.(‘­8şë‡æ1J$5effa1cf-6768-4513-9251-0ba7d19974f5
+~
+java:S1874,"6Remove this use of "parseClaimsJws"; it is deprecated.(ëÙ–ºıÿÿÿÿ8şë‡æ1J$9bec11f4-3cbe-4549-a82b-21f8f8ce731f
+w
+java:S1874-"/Remove this use of "getBody"; it is deprecated.(è‡ªçşÿÿÿÿ8şë‡æ1J$f4a17224-5206-4659-8ff6-72c59b8d767d
+~	java:S1253"<This block of commented-out lines of code should be removed.(”µî8ØÄ¢…æ1J$9d10d391-6ecc-48f4-9b32-a98484c9d3c7
+ƒ	java:S125@"<This block of commented-out lines of code should be removed.(ª‹€Íşÿÿÿÿ8ØÄ¢…æ1J$09c73606-32ac-4dbd-8845-1109d95e9686

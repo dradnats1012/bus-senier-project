@@ -1,0 +1,7 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÆÖàâıÿÿÿÿ8ÿ£¦üå1J$b02d2144-4af1-4b5b-8439-55ed6c425ee3
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(ııŠ„üÿÿÿÿ8é­ü„æ1J$39fff9a9-a1f7-497f-9a46-62053586dbc3
+}
+java:S1128":Remove this unused import 'koreatechBus.auth.JWTProvider'.(…ş›8±Œ¨…æ1J$7d93ba0a-64d8-454d-b474-e9da6e371077
+m
+java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8±ï§…æ1J$9ca17148-e120-487c-81cd-b9f2745a2937

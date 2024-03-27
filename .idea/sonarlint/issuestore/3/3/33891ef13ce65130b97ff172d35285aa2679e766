@@ -1,0 +1,7 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Õ½Áÿÿÿÿÿ8¤ªÎ÷æ1J$57769fa7-48f9-4f19-8c81-81c4e4758979
+	java:S116"[Rename this field "MANAGER_ROLE_NUM" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÈÖù8ªªÎ÷æ1J$e0853e4e-7b1d-4a99-ae10-5774a7a5c2ae
+d
+java:S1170"!Make this final field static too.(ÆÈÖù8ªªÎ÷æ1J$1ff98d19-a41b-4a16-a177-21dc36ec6427
+K
+java:S1144 ".Remove this unused private "isManager" method.(Ìâİ8Ä¨ö¢ç1

@@ -1,6 +1,7 @@
 package koreatechbus.controller;
 
 import koreatechbus.domain.Bus;
+import koreatechbus.dto.bus.BusDTO;
 import koreatechbus.dto.bus.GetBusDTO;
 import koreatechbus.dto.bus.NewBusDTO;
 import koreatechbus.service.BusService;
@@ -18,7 +19,7 @@ public class BusController {
     }
 
     @GetMapping()
-    public List<String> getAllBus(){
+    public List<BusDTO> getAllBus(){
         return busService.getAllBus();
     }
 
