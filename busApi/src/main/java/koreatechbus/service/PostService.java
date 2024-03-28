@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import koreatechbus.domain.Post;
 import koreatechbus.domain.User;
 import koreatechbus.dto.post.RequestPostDTO;
+import koreatechbus.dto.post.ResponsePostDTO;
 import koreatechbus.repository.PostRepository;
 import koreatechbus.repository.UserRepository;
 
@@ -31,5 +32,12 @@ public class PostService {
             .build();
 
         postRepository.save(post);
+    }
+
+    public ResponsePostDTO getPostById(Long postId){
+        Post post = postRepository.findByPostId(postId);
+        User user = post.getUser();
+
+        return ResponsePostDTO.of(post.getTitle(), post.getContent(), post.getPostTime(), user.getName());
     }
 }

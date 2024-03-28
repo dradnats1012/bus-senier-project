@@ -27,7 +27,7 @@ public class Post {
     @Column(name = "post_type") // 1 : 공지사항, 2 : 분실물
     private Long postType;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
@@ -38,5 +38,9 @@ public class Post {
         this.postTime = postTime;
         this.postType = postType;
         this.user = user;
+    }
+
+    public Post() {
+
     }
 }
