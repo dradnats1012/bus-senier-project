@@ -1,5 +1,7 @@
 package koreatechbus.controller;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,11 +32,20 @@ public class PostController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/{postId}")
+    @GetMapping("/id/{postId}")
     public ResponseEntity<ResponsePostDTO> getPostById(
         @PathVariable Long postId
     ){
-        postService.getPostById(postId);
-        return ResponseEntity.ok().body(postService.getPostById(postId));
+        ResponsePostDTO responsePostDTO = postService.getPostById(postId);
+        return ResponseEntity.ok().body(responsePostDTO);
+    }
+
+    @GetMapping("/type/{postType}")
+    public ResponseEntity<List<ResponsePostDTO>> getPostByType(
+        @PathVariable Long postType
+    ){
+        List<ResponsePostDTO> postTypeList =  postService.getPostByType(postType);
+
+        return ResponseEntity.ok().body(postTypeList);
     }
 }

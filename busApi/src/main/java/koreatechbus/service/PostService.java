@@ -1,5 +1,8 @@
 package koreatechbus.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import koreatechbus.domain.Post;
@@ -40,4 +43,17 @@ public class PostService {
 
         return ResponsePostDTO.of(post.getTitle(), post.getContent(), post.getPostTime(), user.getName());
     }
+
+    public List<ResponsePostDTO> getPostByType(Long postType){
+        List<Post> posts = postRepository.findByPostType(postType);
+        List<ResponsePostDTO> postDTOS = new ArrayList<>();
+
+        for(Post post : posts){
+            User user = post.getUser();
+            postDTOS.add(ResponsePostDTO.of(post.getTitle(), post.getContent(), post.getPostTime(), user.getName()));
+        }
+
+        return postDTOS;
+    }
 }
+
